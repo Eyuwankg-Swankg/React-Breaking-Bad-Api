@@ -7,15 +7,16 @@ let Container = () => {
   const [data, setData] = useState(content);
   useEffect(() => setData(content), [content]);
   function filterCharacters(searchString) {
-    console.log(searchString.length);
-    setData([
-      ...data.filter((item) => {
-        return (
-          item.name.substring(0, searchString.length).toLowerCase() ==
-          searchString.toLowerCase()
-        );
-      }),
-    ]);
+    if (searchString == "") setData(content);
+    else
+      setData([
+        ...content.filter((item) => {
+          return (
+            item.name.substring(0, searchString.length).toLowerCase() ==
+            searchString.toLowerCase()
+          );
+        }),
+      ]);
   }
   return (
     <div class="content-container">

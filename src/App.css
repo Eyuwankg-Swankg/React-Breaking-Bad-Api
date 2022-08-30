@@ -32,10 +32,12 @@ header span {
   justify-content: center;
 }
 .card-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 17%);
   gap: 1.5rem;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .card {
@@ -45,6 +47,7 @@ header span {
   perspective: 1000px;
   position: relative;
   border-radius: 4px;
+  border:2px solid rgba(0, 0, 0, 0);
 }
 .card-name {
   left: 5px;
@@ -108,6 +111,9 @@ header span {
   align-items: center;
   padding: 0 20px;
 }
+.card:hover{
+  border:2px solid rgb(10,82,61);
+}
 .card:hover .card-name {
   display: none;
 }
@@ -115,7 +121,7 @@ header span {
   height: 100%;
 }
 .card-container > h1{
-  width: 400px;
+  width: 900px;
   text-align: center;
 }
 
@@ -140,4 +146,9 @@ header span {
 .search-container input::placeholder{
   color: black;
   letter-spacing: 1px;
+}
+@media only screen and (max-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
