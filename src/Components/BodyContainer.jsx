@@ -1,24 +1,31 @@
-import React, { useContext,useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "./Context";
-import Card from "./Card"
-import SearchBar from "./SearchBar"
+import Card from "./Card";
+import SearchBar from "./SearchBar";
 let Container = () => {
   const content = useContext(DataContext);
-  const [data,setData] = useState(content);
-  function filterCharacters(searchString){
-    console.log(searchString);
+  const [data, setData] = useState(content);
+  useEffect(() => setData(content), [content]);
+  function filterCharacters(searchString) {
+    console.log(searchString.length);
+    setData([
+      ...data.filter((item) => {
+        return (
+          item.name.substring(0, searchString.length).toLowerCase() ==
+          searchString.toLowerCase()
+        );
+      }),
+    ]);
   }
   return (
     <div class="content-container">
-      <SearchBar searchCharacters={filterCharacters}/>
+      <SearchBar searchCharacters={filterCharacters} />
       <div class="card-container">
-        {content !== undefined && content.length != 0
-          ? content.map((item, index) => (
-              <Card cardItem={item}/>
-            ))
-          :
-           <h1>No Data!</h1>
-          }
+        {data !== undefined && data.length != 0 ? (
+          data.map((item, index) => <Card cardItem={item} key={index} />)
+        ) : (
+          <h1>No Data!</h1>
+        )}
       </div>
     </div>
   );

@@ -135,5 +135,9 @@ header span {
   border:3px solid black;
 }
 .search-container input:hover{
-  border:3px solid rgb(31, 105, 52);
+  border:3px solid rgb(10,82,61);
+}
+.search-container input::placeholder{
+  color: black;
+  letter-spacing: 1px;
 }
