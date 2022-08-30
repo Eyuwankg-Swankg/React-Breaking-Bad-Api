@@ -13,6 +13,23 @@ let Container = () => {
                 <span class="card-name">{item.name}</span>
                 <div class="card-detail">
                   <h1>{item.name}</h1>
+                  <ul>
+                    <li>
+                      <strong>Actor Name:</strong> {item.portrayed}
+                    </li>
+                    <li>
+                      <strong>Nickname:</strong> {item.nickname}
+                    </li>
+                    <li>
+                      <strong>Birthday:</strong> {item.birthday}
+                    </li>
+                    <li>
+                      <strong>Status:</strong> {item.status}
+                    </li>
+                    <li>
+                      <strong>Portrayed:</strong> {item.portrayed}
+                    </li>
+                  </ul>
                 </div>
               </div>
             ))

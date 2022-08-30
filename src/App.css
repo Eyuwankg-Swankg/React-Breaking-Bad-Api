@@ -44,7 +44,7 @@ header span {
   perspective: 1000px;
   position: relative;
 }
-.card-name{
+.card-name {
   left: 5px;
   bottom: 5px;
   padding: 2px 7px;
@@ -55,13 +55,6 @@ header span {
   border-radius: 4px;
   position: absolute;
 }
-.card h1 {
-  top: 0;
-  font-size: 25px;
-  border-bottom: 1px #fff solid;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
 
 .card img {
   width: 100%;
@@ -69,13 +62,41 @@ header span {
   object-fit: cover;
 }
 
-.card-detail{
+.card-detail {
   top: 0;
   position: absolute;
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   background: rgba(0, 0, 0, 0.6);
 }
-.card-detail:hover .card-name{
-  border: 2px solid red;
+
+.card h1 {
+  margin: 0 auto;
+    top: 10px;
+    left: 0;
+    width: 80%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border-bottom: 1px #fff solid;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-detail li{
+  list-style: none;
+  padding-bottom: 10px;
+}
+.card-detail ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card:hover .card-name {
+  display: none;
 }
