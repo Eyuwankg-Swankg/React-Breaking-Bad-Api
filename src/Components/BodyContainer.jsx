@@ -4,13 +4,21 @@ import { DataContext } from "./Context";
 let Container = () => {
   const content = useContext(DataContext);
   return (
-    <div class="grid-container">
-      <div>
+    <div class="content-container">
+      <div class="card-container">
         {content !== undefined && content.length != 0
-          ? content[0]["name"]
+          ? content.map((item, index) => (
+              <div class="card">
+                <img src={item["img"]} />
+                <span class="card-name">{item.name}</span>
+                <div class="card-detail">
+                  <h1>{item.name}</h1>
+                </div>
+              </div>
+            ))
           : "df"}
       </div>
     </div>
   );
 };
-export default Container;
+export default React.memo(Container);
