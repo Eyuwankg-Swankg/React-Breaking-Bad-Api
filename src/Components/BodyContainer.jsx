@@ -9,7 +9,7 @@ let Container = () => {
         {content !== undefined && content.length != 0
           ? content.map((item, index) => (
               <div class="card">
-                <img src={item["img"]} />
+                <img src={item["img"]} class="card-img"/>
                 <span class="card-name">{item.name}</span>
                 <div class="card-detail">
                   <h1>{item.name}</h1>
@@ -25,9 +25,6 @@ let Container = () => {
                     </li>
                     <li>
                       <strong>Status:</strong> {item.status}
-                    </li>
-                    <li>
-                      <strong>Portrayed:</strong> {item.portrayed}
                     </li>
                   </ul>
                 </div>
