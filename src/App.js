@@ -1,24 +1,25 @@
 import { createContext, useEffect, useState } from "react";
-import axios from "axios";
 import "./App.css";
+import axios  from "axios";
 import Container from "./Components/BodyContainer.jsx";
 import Header from "./Components/Header";
-import {ContentContext} from "./Components/Context"
+import { DataContext } from "./Components/Context";
 function App() {
   const [content, setContent] = useState([]);
   const baseUrl = "https://breakingbadapi.com/api/characters";
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
-      setContent(response.data);
+      setContent([...response.data]);
+      console.log(response);
     });
   }, []);
-  
+
   return (
     <div className="App">
-      <ContentContext.Provider value={content}>
+      <DataContext.Provider value={content}>
         <Header />
         <Container />
-      </ContentContext.Provider>
+      </DataContext.Provider>
     </div>
   );
 }
