@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/React-Breaking-Bad-Api/static/css/main.134340b2.css",
+    "main.js": "/React-Breaking-Bad-Api/static/js/main.91a9f23a.js",
+    "static/js/787.ae028b44.chunk.js": "/React-Breaking-Bad-Api/static/js/787.ae028b44.chunk.js",
+    "static/media/BCS-logo.png": "/React-Breaking-Bad-Api/static/media/BCS-logo.1960f544ba7e69b0301e.png",
+    "static/media/bg.jpg": "/React-Breaking-Bad-Api/static/media/bg.085908ea8f76e1ae1806.jpg",
+    "static/media/BB-logo.png": "/React-Breaking-Bad-Api/static/media/BB-logo.e6ecab4407f10ecd02bd.png",
+    "index.html": "/React-Breaking-Bad-Api/index.html",
+    "main.134340b2.css.map": "/React-Breaking-Bad-Api/static/css/main.134340b2.css.map",
+    "main.91a9f23a.js.map": "/React-Breaking-Bad-Api/static/js/main.91a9f23a.js.map",
+    "787.ae028b44.chunk.js.map": "/React-Breaking-Bad-Api/static/js/787.ae028b44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.134340b2.css",
+    "static/js/main.91a9f23a.js"
+  ]
+}
