@@ -1,5 +1,5 @@
 # Check out the Project Demo here:
-(https://eyuwankg-swankg.github.io/React-Breaking-Bad-Api/)
+[React Breaking Bad](https://eyuwankg-swankg.github.io/React-Breaking-Bad-Api/)
 
 # Getting Started with Create React App
 
